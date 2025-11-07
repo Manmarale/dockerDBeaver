@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: dbeaver-web
+    env: docker
+    plan: free
+    docker:
+      dockerfile: Dockerfile
+    envVars:
+      - key: CB_SERVER_NAME
+        value: "DBeaver Odoo Admin"
+    numInstances: 1
